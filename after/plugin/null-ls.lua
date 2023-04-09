@@ -11,13 +11,15 @@ null_ls.setup({
         --null_ls.builtins.diagnostics.eslint
         --null_ls.builtins.completion.spell,
     },
-    on_attach = function(client)
-        if client.server_capabilities.document_formatting then 
-            vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
-        end
-    end
+    on_attach = function()
+        vim.api.nvim_create_autocmd("BufWritePost", {
+            callback = function()
+                vim.lsp.buf.format()
+            end,
+        })
+    end,
 })
 
 vim.keymap.set("n", "<leader>ff", function()
-    vim.lsp.buf.formatting_seq_sync()
+    vim.lsp.buf.format()
 end)
