@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   use('PhilRunninger/nerdtree-visual-selection')
   use('ryanoasis/vim-devicons')
   use('jose-elias-alvarez/null-ls.nvim')
+  use('jiangmiao/auto-pairs')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
