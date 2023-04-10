@@ -29,6 +29,12 @@ return require('packer').startup(function(use)
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
