@@ -12,14 +12,15 @@ null_ls.setup({
         --null_ls.builtins.completion.spell,
     },
     on_attach = function()
-        vim.api.nvim_create_autocmd("BufWritePost", {
-            callback = function()
-                vim.lsp.buf.format()
-            end,
-        })
+        --vim.api.nvim_create_autocmd("BufWritePost", {
+        --    callback = function()
+        --        vim.lsp.buf.format()
+        --    end,
+        --})
     end,
 })
 
 vim.keymap.set("n", "<leader>ff", function()
     vim.lsp.buf.format()
-end)
+end
+)

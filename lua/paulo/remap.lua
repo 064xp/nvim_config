@@ -15,6 +15,9 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+-- Don't advance when press space in visual mode
+vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
+
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Buffers
@@ -28,7 +31,7 @@ vim.keymap.set('n', '<C-k>', ':bnext<CR>', { noremap = true })
 vim.keymap.set('n', '<C-j>', ':bprevious<CR>', { noremap = true })
 
 -- Delete current buffer
-vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { noremap = true })
+vim.keymap.set('n', '<C-x>', ':bdelete<CR>', { noremap = true })
 
 
 -- Tabs
