@@ -25,6 +25,10 @@ return require('packer').startup(function(use)
   use('ryanoasis/vim-devicons')
   use('jose-elias-alvarez/null-ls.nvim')
   use('jiangmiao/auto-pairs')
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',

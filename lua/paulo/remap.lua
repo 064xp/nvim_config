@@ -16,3 +16,30 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "Q", "<nop>")
+
+-- Buffers
+
+-- Jump to next buffer
+--vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { noremap = true })
+vim.keymap.set('n', '<C-k>', ':bnext<CR>', { noremap = true })
+
+-- Jump to previous buffer
+--vim.keymap.set('n', '<leader>bp', ':bprevious<CR>', { noremap = true })
+vim.keymap.set('n', '<C-j>', ':bprevious<CR>', { noremap = true })
+
+-- Delete current buffer
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { noremap = true })
+
+
+-- Tabs
+-- Jump to next tab
+vim.keymap.set('n', '<leader>tn', ':tabnext<CR>', { noremap = true })
+
+-- Jump to previous tab
+vim.keymap.set('n', '<leader>tp', ':tabprevious<CR>', { noremap = true })
+
+-- Close current tab
+vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true })
+
+-- Create a new tab
+vim.api.nvim_set_keymap('n', '<leader>ta', ':tabnew<CR>', { noremap = true })
