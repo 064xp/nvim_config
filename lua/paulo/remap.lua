@@ -31,7 +31,8 @@ vim.keymap.set('n', '<C-k>', ':bnext<CR>', { noremap = true })
 vim.keymap.set('n', '<C-j>', ':bprevious<CR>', { noremap = true })
 
 -- Delete current buffer
-vim.keymap.set('n', '<C-x>', ':bdelete<CR>', { noremap = true })
+vim.keymap.set('n', '<C-x>', ':bp|bd#<CR>', { noremap = true })
+
 
 
 -- Tabs
