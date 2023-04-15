@@ -47,3 +47,11 @@ vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true })
 
 -- Create a new tab
 vim.api.nvim_set_keymap('n', '<leader>ta', ':tabnew<CR>', { noremap = true })
+
+-- Terminal
+-- Open terminal at the bottom of the window
+vim.keymap.set('n', '<leader>`', ':botright 10split | resize 10 | term <CR>', {noremap=true})
+-- Exit terminal mode with escape
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n><C-w>k', { noremap = true })
+-- Close terminal and delete buffer
+vim.keymap.set('t', '<C-x>', '<C-\\><C-n>:bd!<CR>', { noremap = true })

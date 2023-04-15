@@ -13,6 +13,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 if os.getenv("OS") == "Windows_NT" then
     vim.opt.undodir = os.getenv("UserProfile") .. "/.vim/undodir"
+    vim.opt.shell = "powershell"
 else
     vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end
