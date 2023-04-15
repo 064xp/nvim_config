@@ -1,3 +1,7 @@
+-- Apply colors
+vim.keymap.set("n", "<leader>lc", ":lua Colors() <CR>")
+
+-- Open netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move highlighted text up and down
