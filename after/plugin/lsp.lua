@@ -23,6 +23,7 @@ require'lspconfig'.pyright.setup({})
 lsp.ensure_installed({
 	'tsserver',
 	'eslint',
+	'pyright',
 })
 
 local cmp = require('cmp')
