@@ -6,7 +6,6 @@ local sources = {
     }),
     null_ls.builtins.code_actions.eslint,
     null_ls.builtins.formatting.black,
-    null_ls.builtins.diagnostics.codespell.with({filetypes = {'markdown'}}),
     --null_ls.builtins.completion.spell,
 }
 
