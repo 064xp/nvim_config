@@ -4,6 +4,7 @@ local sources = {
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.code_actions.eslint,
     null_ls.builtins.formatting.black,
+    null_ls.builtins.formatting.gofumpt,
     --null_ls.builtins.completion.spell,
 }
 
