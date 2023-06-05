@@ -35,10 +35,4 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<C-Space>'] = cmp.mapping.complete(),
 })
 
-require("lspconfig").tsserver.setup({
-    on_attach = function(client)
-        client.resolved_capabilities.document_formatting = false
-    end,
-})
-
 lsp.setup()

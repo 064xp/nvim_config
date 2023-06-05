@@ -11,15 +11,15 @@ local sources = {
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 null_ls.setup({
     sources = sources,
-    on_attach = function(client)
-        if client.server_capabilities.documentFormattingProvider then
-            vim.api.nvim_create_autocmd("BufWritePre", {
-                callback = function()
-                    vim.lsp.buf.format()
-                end
-            })
-        end
-    end
+    -- on_attach = function(client)
+    --     if client.server_capabilities.documentFormattingProvider then
+    --         vim.api.nvim_create_autocmd("BufWritePre", {
+    --             callback = function()
+    --                 vim.lsp.buf.format()
+    --             end
+    --         })
+    --     end
+    -- end
 })
 
 vim.keymap.set("n", "<leader>ff", function()
