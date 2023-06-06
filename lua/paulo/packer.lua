@@ -42,6 +42,8 @@ return require('packer').startup(function(use)
 
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
+    use '064xp/clipboard-image.nvim'
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
